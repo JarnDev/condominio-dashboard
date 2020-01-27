@@ -1,0 +1,36 @@
+<div class="container" >
+  <ul style="font-size: 10px;" class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  
+      <li class="nav-item">
+        <a class="nav-link active" id="pills-painel-tab" data-toggle="pill" href="#pills-painel" role="tab" aria-controls="pills-painel" aria-selected="true">Painel</a>
+      </li>
+  
+      <li class="nav-item">
+        <a class="nav-link" id="pills-embasa-tab" data-toggle="pill" href="#pills-embasa" role="tab" aria-controls="pills-embasa" aria-selected="false">Embasa</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" id="pills-detalhamento-tab" data-toggle="pill" href="#pills-detalhamento" role="tab" aria-controls="pills-detalhamento" aria-selected="false">Detalhamento</a>
+      </li>
+  
+  </ul>
+</div>
+
+<div class="tab-content" id="pills-tabContent">
+
+  <div class="tab-pane fade show active" id="pills-painel" role="tabpanel" aria-labelledby="pills-painel-tab">
+    
+    <app-painel-dashboard></app-painel-dashboard>
+
+  </div>
+  
+  <div class="tab-pane fade container" id="pills-embasa" role="tabpanel" aria-labelledby="pills-embasa-tab">
+      <p>Coloque a matricula: 27767752 na aba 2º via de conta</p>
+      <iframe style="height: 90vh;" width="100%" src="https://agenciavirtual.embasa.ba.gov.br/#/main/dyview/open-search/SEGUNDAVIA-LISTA/%3FpMatricula%3D27767752%26/2"></iframe>
+  </div>
+
+  <div class="tab-pane fade container" id="pills-detalhamento" role="tabpanel" aria-labelledby="pills-detalhamento-tab">
+    <app-detalhamento></app-detalhamento>  
+  </div>
+  
+</div>

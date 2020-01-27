@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+.pago{
+    background-color: rgb(120, 185, 120);
+    text-align: center;
+}
+.inadimplente{
+    background-color: rgb(255, 0, 0);
+    text-align: center;
+}
+.mes{
+    text-align: center;
+}
+.ap{
+    text-align: center;
+}
+.futuro{
+    background-color: rgb(241, 241, 180);
+    
+}

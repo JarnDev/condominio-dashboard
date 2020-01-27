@@ -1,0 +1,30 @@
+<div class="tab-pane fade show active mt-1" id="pills-painel" role="tabpanel" aria-labelledby="pills-painel-tab">
+    <div class="container">
+      <ul style="font-size: 10px; margin-bottom: 1px;" class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li *ngFor="let ano of anosList" class="nav-item">
+        <button style="font-size: 10px;" class='btn btn-primary' (click)='getResumoAno(ano)'>{{ano}}</button>
+        </li>
+      </ul>
+    </div>
+</div>
+
+<div class="container">
+<table class="table table-bordered">
+    <thead>
+      <tr>
+      <th class="ap" scope="col">{{anoAtivo}}</th>
+        <th class='mes' *ngFor="let mes of meses" scope="col">{{mes}}</th>
+      </tr>
+    </thead>
+    <tbody style="line-height: .7em;">
+      <tr *ngFor="let ap of apartamentos | keyvalue">
+        <th class="ap" scope="row">{{ap.key}}</th>
+        <td style="cursor: pointer;" (click)='update(ap.key, i)' *ngFor="let status of ap.value;let i = index" [ngClass]="status?'pago':'inadimplente'"></td>
+      </tr>
+    </tbody>
+</table>
+</div>
+<div class="container">
+    <button class="btn btn-success float-left" (click)='save()'>Resumo Mes</button>
+    <button class="btn btn-success float-right" (click)='save()'>Salvar</button>
+</div>
